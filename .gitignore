@@ -1,0 +1,16 @@
+# IDE
+.vscode
+.idea
+
+# packages
+**/node_modules
+
+# env
+.env
+.env.local
+
+# build outputs
+dist
+*.d.ts
+src/*.js
+

@@ -1,0 +1,61 @@
+{
+  "name": "@yumii.saiko/testy",
+  "version": "0.1.1",
+  "homepage": "https://github.com/YumeT023/testy#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/YumeT023/testy/issues",
+    "email": "yumii.saiko@gmail.com"
+  },
+  "keywords": [
+    "test",
+    "facade",
+    "decorator",
+    "typescript",
+    "testing",
+    "jest",
+    "ts-jest"
+  ],
+  "exports": {
+    ".": {
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./decorators": {
+      "default": "./dist/decorator/index.js",
+      "types": "./dist/decorator/index.d.ts"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "test": "jest",
+    "format": "prettier --write .",
+    "build": "npx tsc -p tsconfig.json"
+  },
+  "description": "Decorator-based testing framework that abstracts existing testing framework",
+  "author": "yumii.saiko <yumii.saiko@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "@types/node": "18.17.1",
+    "prettier": "^3.0.0",
+    "ts-node": "^10.9.2"
+  },
+  "peerDependencies": {
+    "jest": "^29.6.2",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "tslib": "^2.6.2"
+  }
+}
