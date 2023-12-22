@@ -23,7 +23,8 @@
   "files": [
     "dist",
     "README.md",
-    "package.json"
+    "package.json",
+    "License"
   ],
   "scripts": {
     "test": "jest",
