@@ -1,6 +1,45 @@
-# Testy
+<h1 align="center"> Testy 🧨 </h1>
 
-Decorator-based testing frameworks facade in Typescript
+<p align="center">
+  Decorator-based testing frameworks
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/@yumii.saiko/testy">
+    <img src="https://img.shields.io/npm/v/@yumii.saiko/testy.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen" alt="Test on npm" />
+  </a>&nbsp;
+</p>
+
+## What 👽 ?
+
+### It is
+
+- Facade for the existent ones
+- ... a candy for the Java JUnit folks
+- ... what it is, ... a framework ?
+
+### It isn't
+
+- Re-implemented Testing framework
+- Ready for real life project (yet)
+
+## Features
+
+- [x] Isolated test
+- [ ] Decorators
+  - [x] Test Class: @TestClass(desc?)
+  - [x] Hooks: @BeforeAll, @BeforeEach, @AfterEach, @AfterAll
+  - [ ] Test Suites: @Test(desc?, skip?, order?)
+    - [x] Base decorator
+    - [x] skip
+    - [ ] Order (not really useful)
+- [ ] Compatibility
+  - [x] jest
+  - [ ] vitest
+  - [ ] Mocha
+  - [ ] playwright
+  - [ ] cypress
+  - [ ] Jasmine
 
 ## Usage
 
@@ -10,7 +49,7 @@ You would like it to contain both the `sum` function and its `test`. Here's how 
 > src/sum.ts
 
 ```typescript
-import {TestClass, Test} from "@yumii.saiko/testy/decorators";
+import {TestClass, Test} from "@yumii.saiko/testy";
 
 export function sum(...numbers: number[]) {
   return numbers.reduce((acc, n) => acc + n, 0);
