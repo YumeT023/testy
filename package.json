@@ -18,19 +18,8 @@
     "jest",
     "ts-jest"
   ],
-  "exports": {
-    ".": {
-      "default": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./decorators": {
-      "default": "./dist/decorator/index.js",
-      "types": "./dist/decorator/index.d.ts"
-    },
-    "./types": {
-      "types": "./dist/types.d.ts"
-    }
-  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "README.md",
