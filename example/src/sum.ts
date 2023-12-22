@@ -1,4 +1,4 @@
-import {Test, TestClass} from "@yumii.saiko/testy/decorators";
+import {Test, TestClass} from "@yumii.saiko/testy";
 
 export function sum(...numbers: number[]) {
   return numbers.reduce((acc, val) => acc + val, 0 /* initial */);

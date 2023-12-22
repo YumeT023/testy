@@ -1,10 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
     "lib": ["esnext", "dom"],
     "target": "es6",
-    "module": "NodeNext",
-    "moduleResolution": "Node16",
+    "module": "esnext",
+    "moduleResolution": "node",
     "downlevelIteration": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "dist",
@@ -13,8 +12,7 @@
     "resolveJsonModule": true,
     "declaration": false,
     "noImplicitAny": true,
-    "skipLibCheck": true,
-    "types": ["jest", "node"]
+    "skipLibCheck": true
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]
