@@ -14,6 +14,7 @@
 
 <h3>It is</h3>
 
+- for learning purpose ... (TS v5 decorator proposal)
 - a facade for the existent ones
 - ... a candy for the Java JUnit folks
 - ... what it is, ... a framework ?
@@ -25,6 +26,7 @@
 
 <h2>Features ✨</h2>
 
+- [ ] Use the same Testing Api for every testing framework
 - [x] Isolated test
 - [ ] Decorators
   - [x] Test Class: @TestClass(desc?)

@@ -1,3 +1,4 @@
+import {jestExpect as expect} from "@jest/expect";
 import {Test, TestClass} from "@yumii.saiko/testy";
 
 export function sum(...numbers: number[]) {
