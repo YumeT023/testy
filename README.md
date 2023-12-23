@@ -10,20 +10,20 @@
   </a>&nbsp;
 </p>
 
-## What 👽 ?
+<h2>What 👽 ? </h2>
 
-### It is
+<h3>It is</h3>
 
-- Facade for the existent ones
+- a facade for the existent ones
 - ... a candy for the Java JUnit folks
 - ... what it is, ... a framework ?
 
-### It isn't
+<h3>It isn't</h3>
 
 - Re-implemented Testing framework
 - Ready for real life project (yet)
 
-## Features
+<h2>Features ✨</h2>
 
 - [x] Isolated test
 - [ ] Decorators
@@ -34,6 +34,7 @@
     - [x] skip
     - [ ] Order (not really useful)
 - [ ] Compatibility
+  - [x] Custom platform
   - [x] jest
   - [ ] vitest
   - [ ] Mocha
@@ -41,7 +42,7 @@
   - [ ] cypress
   - [ ] Jasmine
 
-## Usage
+<h2>Usage</h2>
 
 Suppose you have a _function sum(...numbers)_ function in a file named `sum.ts`.
 You would like it to contain both the `sum` function and its `test`. Here's how you could accomplish that.
@@ -77,11 +78,18 @@ Using the filename pattern that your testing framework might identify, example `
 > src/test/bootstrap_test.spec.ts
 
 ```typescript
-import {DECLARE_TESTS} from "@yumii.saiko/testy";
-import {SumTest} from "../sum.ts";
+import {defineTests} from "@yumii.saiko/testy";
+// There we provided our own impl for jest platform
+// Testy will come with a set of platform so you don't need to impl them yourself
+import {PlatformJestImpl} from "../lib/testy_platform_jest"; 
+import {SumTest} from "../sum";
 
-DECLARE_TESTS([SumTest]);
+defineTests([SumTest], PlatformJestImpl);
 ```
+
+<p>
+  You can find the code for this example in the <a href="https://github.com/YumeT023/testy/tree/main/example" alt="example code">example folder</a>
+</p>
 
 > screenshot (jest)
 

@@ -1,4 +1,5 @@
-import {DECLARE_TESTS} from "@yumii.saiko/testy";
+import {defineTests} from "@yumii.saiko/testy";
 import {SumTest} from "../sum";
+import {PlatformJestImpl} from "../lib/testy_platform_jest";
 
-DECLARE_TESTS([SumTest]);
+defineTests([SumTest], PlatformJestImpl);
