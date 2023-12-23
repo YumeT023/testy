@@ -19,12 +19,6 @@ export interface RawTestClassMetadata {
   suites: string[];
 }
 
-export interface PlatformTest {
-  runAll(): void;
-  runTestSuites(): void;
-  runTestHooks(): void;
-}
-
 export interface TestHook {
   run: () => void;
 }

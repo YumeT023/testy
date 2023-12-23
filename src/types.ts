@@ -5,5 +5,5 @@ export interface Ctor<T> extends Function {
 export type ClassDecorator = (type: Ctor<unknown>, ctx: ClassDecoratorContext) => any;
 export type ClassMethodDecorator = (f: Function, ctx: ClassMethodDecoratorContext) => any;
 
-export type * from "./platform/platform_capabilities";
+export type * from "./platform/runnable_test";
 export type * from "./impl/types";

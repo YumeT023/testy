@@ -1,1 +1,1 @@
-export {DECLARE_TESTS} from "./declare_tests";
+export {defineTests} from "./define_tests";
