@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "lib": ["ESNext", "dom"],
-    "target": "ES5",
+    "lib": ["es2022", "dom"],
+    "target": "es2022",
     "module": "CommonJS",
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
@@ -16,6 +16,6 @@
     // use this option with 'tslib' to significantly optimize build output
     "importHelpers": true
   },
-  "include": ["src"],
+  "files": ["src/index.ts", "src/types.ts"],
   "exclude": ["node_modules", "dist"]
 }
