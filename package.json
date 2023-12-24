@@ -1,30 +1,16 @@
 {
-  "name": "@yumii.saiko/testy",
-  "version": "0.4.1",
+  "name": "testy",
+  "version": "0.0.0-PLACEHOLDER",
+  "private": true,
   "homepage": "https://github.com/YumeT023/testy#readme",
-  "publishConfig": {
-    "access": "public"
-  },
   "bugs": {
     "url": "https://github.com/YumeT023/testy/issues",
     "email": "yumii.saiko@gmail.com"
   },
   "keywords": [
-    "test",
-    "facade",
     "decorator",
     "typescript",
-    "testing",
-    "jest",
-    "ts-jest"
-  ],
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist",
-    "README.md",
-    "package.json",
-    "License"
+    "testing"
   ],
   "scripts": {
     "test": "jest",
@@ -32,7 +18,7 @@
     "check:code": "prettier --check .",
     "build": "npx tsc -p tsconfig.json"
   },
-  "description": "Decorator-based testing framework that abstracts existing testing framework",
+  "description": "Write modular test using typescript decorator",
   "author": "yumii.saiko <yumii.saiko@gmail.com>",
   "license": "MIT",
   "devDependencies": {
