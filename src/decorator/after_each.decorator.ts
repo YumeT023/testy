@@ -1,4 +1,4 @@
 import {AFTER_EACH_HOOKS} from "./constants";
-import {makeFunMarkerDecorator} from "./util/make_fun_marker_decorator";
+import {registerFunDecoratorFactory} from "./util/register_fun_decorator_factory";
 
-export const AfterEach = makeFunMarkerDecorator(AFTER_EACH_HOOKS);
+export const AfterEach = registerFunDecoratorFactory(AFTER_EACH_HOOKS);
