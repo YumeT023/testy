@@ -9,10 +9,12 @@ export class DecoratorSpec {
   static NON_CLS: any = {};
   static NOOP_CLS = /* @__PURE__ */ class NoopCls {};
   static TEST_CLS =
-    /* @__PURE__ */ @TestClass()
+    /* @__PURE__ */
+    @TestClass()
     class TestCls {};
   static TEST_CLS_WITH_CUSTOM_DESC =
-    /* @__PURE__ */ @TestClass({desc: "cls_custom_desc"})
+    /* @__PURE__ */
+    @TestClass({desc: "cls_custom_desc"})
     class TestClsWithCustomDesc {};
 
   @Test()
