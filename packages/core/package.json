@@ -1,7 +1,6 @@
 {
   "name": "@testy/core",
-  "version": "^1.0.0",
-  "private": true,
+  "version": "0.4.2",
   "homepage": "https://github.com/YumeT023/testy#readme",
   "engines": {
     "node": "^18.13.0 || ^20.9.0"
@@ -11,12 +10,20 @@
     "type": "git",
     "directory": "packages/core"
   },
+  "scripts": {
+    "build": "tsc -b -v"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "license"
+  ],
   "keywords": [
     "decorator",
     "typescript",
     "testing"
   ],
-  "description": "",
+  "description": "Testy - the core module",
   "author": "yumii.saiko <yumii.saiko@gmail.com>",
   "license": "MIT",
   "dependencies": {
