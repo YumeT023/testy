@@ -14,12 +14,14 @@
 
 <h3>It</h3>
 
+- a framework, which does nothing for you but convert your functionally rich file into a more modular format
 - Allows you to write your test with Typescript decorator while using your favorite testing framework
 - ... is a candy for the Java JUnit folks
 
 <h3>It isn't</h3>
 
-- a framework, which does nothing for you but convert your functionally rich file into a more modular format
+- a re-implemented testing framework
+- a magical potion that turns your ci 🟢
 
 <h2>Features ✨</h2>
 
