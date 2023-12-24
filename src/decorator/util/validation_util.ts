@@ -3,15 +3,18 @@ import {TEST_CLASS_WATERMARK, TEST_SUITE_WATERMARK} from "../constants";
 import {findMetadata} from "./metadata_util";
 
 export function validateIsTestClass(Ctor: Ctor<any>) {
-  const INVALID_TEST_CLASS = "Ctor: " + Ctor.name + " is not a valid test class.\n";
+  const INVALID_TEST_CLASS = (ctor: any) =>
+    ctor.name
+      ? "Ctor: " + ctor.name + " is not a valid test class.\n"
+      : ctor + " is not a valid test class.\n";
 
   if (!Ctor || typeof Ctor !== "function") {
-    throw new TypeError(INVALID_TEST_CLASS + "@TestClass\nclass Foo {}");
+    throw new TypeError(INVALID_TEST_CLASS(Ctor) + "@TestClass\nclass Foo {}");
   }
 
   if (!findMetadata(Ctor, TEST_CLASS_WATERMARK)) {
     throw new TypeError(
-      INVALID_TEST_CLASS + "Use the @TestClass decorator to mark it as test class.\n"
+      INVALID_TEST_CLASS(Ctor) + "Use the @TestClass decorator to mark it as test class."
     );
   }
 }
