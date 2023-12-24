@@ -1,0 +1,31 @@
+{
+  "name": "@testy/core",
+  "version": "0.4.2",
+  "homepage": "https://github.com/YumeT023/testy#readme",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": "^18.13.0 || ^20.9.0"
+  },
+  "repository": {
+    "url": "https://github.com/YumeT023/testy",
+    "type": "git",
+    "directory": "packages/core"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "license"
+  ],
+  "keywords": [
+    "decorator",
+    "typescript",
+    "testing"
+  ],
+  "description": "Testy - the core module",
+  "author": "yumii.saiko <yumii.saiko@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "tslib": "^2.6.2"
+  }
+}

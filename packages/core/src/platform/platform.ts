@@ -2,14 +2,15 @@ import {Ctor, ProcessedTestClass} from "../types";
 import {RunnableTest} from "./runnable_test";
 
 export abstract class Platform {
-  static async tryGetPlatformImpl<T extends Platform>(framework: Framework): Promise<T> {
-    const moduleName = `@yumii.saiko/testy_${framework}_platform`;
+  static tryGetPlatformImpl<T extends Platform>(framework: Framework): T {
+    const moduleName = `@testy/platform_${framework}`;
 
     let Impl: Ctor<T>;
 
     try {
-      const mod = await import(moduleName);
-      Impl = mod.default || mod.impl;
+      // /!\ Explicitly loaded sync because test declaration should be sync
+      const mod = require(moduleName);
+      Impl = mod.default || mod.Impl;
     } catch {
       console.log("Unable to load platform mod. Try to install: '" + moduleName + "'");
       process.exit(1);

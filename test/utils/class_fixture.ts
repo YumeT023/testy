@@ -1,4 +1,4 @@
-import {TestClass} from "../../decorator";
+import {TestClass} from "@testy/core";
 
 export class ClassFixture {
   /**
