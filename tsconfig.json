@@ -16,6 +16,6 @@
     // use this option with 'tslib' to significantly optimize build output
     "importHelpers": true
   },
-  "files": ["src/index.ts", "src/types.ts"],
-  "exclude": ["node_modules", "dist"]
+  "files": ["src/index.ts"],
+  "exclude": ["node_modules"]
 }

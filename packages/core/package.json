@@ -1,0 +1,25 @@
+{
+  "name": "@testy/core",
+  "version": "^1.0.0",
+  "private": true,
+  "homepage": "https://github.com/YumeT023/testy#readme",
+  "engines": {
+    "node": "^18.13.0 || ^20.9.0"
+  },
+  "repository": {
+    "url": "https://github.com/YumeT023/testy",
+    "type": "git",
+    "directory": "packages/core"
+  },
+  "keywords": [
+    "decorator",
+    "typescript",
+    "testing"
+  ],
+  "description": "",
+  "author": "yumii.saiko <yumii.saiko@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "tslib": "^2.6.2"
+  }
+}
