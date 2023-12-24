@@ -23,8 +23,7 @@
 
 <h2>Features ✨</h2>
 
-- [ ] Use the same Testing Api for every testing framework
-- [x] Isolated test
+- [x] Modular test
 - [ ] Decorators
   - [x] Test Class: @TestClass(desc?)
   - [x] Hooks: @BeforeAll, @BeforeEach, @AfterEach, @AfterAll
@@ -32,7 +31,7 @@
     - [x] Base decorator
     - [x] skip
     - [ ] Order (not really useful)
-- [ ] Compatibility
+- [ ] Testing Platform impl
   - [x] Custom platform
   - [x] jest
   - [ ] vitest
@@ -88,10 +87,16 @@ import {SumTest} from "../sum";
 defineTests([SumTest], PlatformJestImpl);
 ```
 
-<p>
-  You can find the code for this example in the <a href="https://github.com/YumeT023/testy/tree/main/example" alt="example code">example folder</a>
-</p>
+Run
+
+```shell
+npm test
+```
 
 > screenshot (jest)
 
 ![jest_testy](./assets/testy_jest.PNG)
+
+<p>
+  You can find the code for this example in the <a href="https://github.com/YumeT023/testy/tree/main/example" alt="example code">example folder</a>
+</p>
