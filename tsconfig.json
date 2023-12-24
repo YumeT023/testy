@@ -1,21 +1,5 @@
 {
-  "compilerOptions": {
-    "lib": ["es2022", "dom"],
-    "target": "es2022",
-    "module": "CommonJS",
-    "moduleResolution": "node",
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "dist",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "declaration": true,
-    "noImplicitAny": true,
-    "skipLibCheck": true,
-    // by default, typescript redefine the utilities like 'extendStatic', '_decorate'
-    // use this option with 'tslib' to significantly optimize build output
-    "importHelpers": true
-  },
+  "extends": "./tsconfig.base.json",
   "files": ["src/index.ts"],
   "exclude": ["node_modules"]
 }
