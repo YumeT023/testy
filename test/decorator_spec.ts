@@ -1,7 +1,8 @@
-import {Test, TestClass} from "../decorator";
-import {TEST_CLASS_DESC} from "../decorator/constants";
-import {getMetadata} from "../decorator/util/metadata_util";
-import {validateIsTestClass} from "../decorator/util/validation_util";
+import {Test, TestClass} from "@testy/core";
+// These are internal so won't be exposed in the published pkg
+import {TEST_CLASS_DESC} from "../packages/core/dist/decorator/constants";
+import {getMetadata} from "../packages/core/dist/decorator/util/metadata_util";
+import {validateIsTestClass} from "../packages/core/dist/decorator/util/validation_util";
 import {ClassFixture} from "./utils/class_fixture";
 
 @TestClass()

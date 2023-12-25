@@ -15,7 +15,7 @@ jobs:
       - run:
           name: Check code style
           command: yarn format
-  tests:
+  build_and_test:
     executor:
       name: node/default
       tag: "18.19.0"
@@ -23,6 +23,11 @@ jobs:
       - checkout
       - node/install-packages:
           pkg-manager: yarn
+
+      - run:
+          name: Build All packages
+          command: yarn build
+
       - run:
           name: Run tests
           command: yarn test
@@ -31,4 +36,4 @@ workflows:
   ci:
     jobs:
       - check_style
-      - tests
+      - build_and_test
