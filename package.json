@@ -1,6 +1,7 @@
 {
   "name": "testy",
   "version": "1.0.0",
+  "private": true,
   "homepage": "https://github.com/YumeT023/testy#readme",
   "repository": {
     "type": "git",
@@ -9,22 +10,12 @@
   "engines": {
     "node": "^18.13.0 || ^20.9.0"
   },
-  "keywords": [
-    "decorator",
-    "typescript",
-    "testing"
-  ],
   "scripts": {
     "test": "jest",
     "format": "prettier --write .",
     "check:code": "prettier --check .",
     "build": "npx tsc -p tsconfig.json"
   },
-  "files": [
-    "dist",
-    "License",
-    "README.md"
-  ],
   "description": "Testy - write modular test using typescript decorator",
   "author": "yumii.saiko <yumii.saiko@gmail.com>",
   "license": "MIT",
@@ -40,7 +31,6 @@
     "ts-node": "^10.9.2"
   },
   "dependencies": {
-    "@testy/core": "0.4.2",
     "tslib": "^2.6.2",
     "typescript": "^5.3.3"
   }
