@@ -1,5 +1,4 @@
-import {Platform} from "../../platform";
-import {ProcessedTestClass, RunnableTest} from "../../types";
+import {Platform, ProcessedTestClass, RunnableTest} from "@testy/core";
 
 export class MockPlatformImpl extends Platform {
   compileTestMetadata(_metadata: ProcessedTestClass): RunnableTest {
