@@ -12,9 +12,6 @@
     "type": "git",
     "directory": "packages/platform_jest"
   },
-  "scripts": {
-    "build": "tsc -b -v"
-  },
   "files": [
     "dist",
     "README.md",
