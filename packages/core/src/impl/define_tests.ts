@@ -6,21 +6,19 @@ import {scanMetadata, tryProcessMetadata} from "./process_metadata";
 type SetPlatform = Framework | Ctor<Platform>;
 
 export function defineTests(Ctors: Ctor<any>[], platform: SetPlatform) {
-  const platformImpl = _tryGetPlatformImpl(platform).next().value as Platform;
+  const platformImpl = _tryGetPlatform(platform);
   for (const Ctor of Ctors) {
     const test = _defineTest(Ctor, platformImpl);
     test.runAll();
   }
 }
 
-// /!\ sync-ify because test declaration doesn't work in jest and
-// might not work in other testing framework either
-function* _tryGetPlatformImpl(frameworkOrImplCtor: SetPlatform) {
-  if (typeof frameworkOrImplCtor === "string") {
-    yield Platform.tryGetPlatformImpl(frameworkOrImplCtor /* framework name */);
-    return; // for type guard
+// /!\ Explicitly Syncify because test declaration shouldn't be asynchronous
+function _tryGetPlatform(ImplCtorOrframework: SetPlatform) {
+  if (typeof ImplCtorOrframework === "string") {
+    return Platform.tryGetPlatformImpl(ImplCtorOrframework);
   }
-  yield /* @__PURE__ */ new frameworkOrImplCtor();
+  return new ImplCtorOrframework();
 }
 
 function _defineTest(Ctor: Ctor<any>, platform: Platform) {
