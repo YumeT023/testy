@@ -2,6 +2,8 @@
   "name": "@testy/core",
   "version": "0.4.2",
   "homepage": "https://github.com/YumeT023/testy#readme",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "engines": {
     "node": "^18.13.0 || ^20.9.0"
   },
