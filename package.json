@@ -16,11 +16,6 @@
     "check:code": "prettier --check .",
     "build": "npx tsc -p tsconfig.json"
   },
-  "files": [
-    "dist",
-    "License",
-    "README.md"
-  ],
   "description": "Testy - write modular test using typescript decorator",
   "author": "yumii.saiko <yumii.saiko@gmail.com>",
   "license": "MIT",
