@@ -1,9 +1,7 @@
 import {addValuesToArrayMetadata} from "./metadata_util";
 
-export function registerFunDecoratorFactory(key: string) {
-  return (_: Function, ctx: ClassMethodDecoratorContext) => {
-    ctx.addInitializer(function (this: any) {
-      addValuesToArrayMetadata(this.constructor, key, ctx.name);
-    });
+export function registerFunDecoratorFactory(metadataKey: string): MethodDecorator {
+  return (target, name, _desc) => {
+    addValuesToArrayMetadata(target.constructor, metadataKey, name);
   };
 }
