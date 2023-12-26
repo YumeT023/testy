@@ -1,4 +1,4 @@
-import {validateIsTestClass} from "../decorator/util/validation_util";
+import {validateIsTestClass} from "../decorators/util/validation_util";
 import {Framework, Platform} from "../platform/platform";
 import {Ctor} from "../types";
 import {scanMetadata, tryProcessMetadata} from "./process_metadata";
