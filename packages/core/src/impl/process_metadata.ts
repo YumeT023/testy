@@ -7,22 +7,22 @@ import {
   TEST_SUITES,
   TEST_SUITE_DESCRIPTION,
   TEST_SUITE_SKIP,
-} from "../decorator/constants";
-import {getMetadata, getMetadataOrDefault} from "../decorator/util/metadata_util";
-import {validateIsTestSuiteFn} from "../decorator/util/validation_util";
+} from "../decorators/constants";
+import {getMetadata, getMetadataOrDefault} from "../decorators/util/metadata_util";
+import {validateIsTestSuiteFn} from "../decorators/util/validation_util";
 import {Ctor} from "../types";
 import {mapNonNullish} from "../util/nullish";
 import {ProcessedTestClass, RawTestClassMetadata, TestHook, TestSuite} from "./types";
 
 export function scanMetadata(Ctor: Ctor<any>): RawTestClassMetadata {
   return {
-    desc: getMetadata(Ctor, TEST_CLASS_DESC),
-    suites: getMetadataOrDefault(Ctor, TEST_SUITES, []),
+    desc: getMetadata(TEST_CLASS_DESC, Ctor),
+    suites: getMetadataOrDefault(TEST_SUITES, Ctor, []),
     hooks: {
-      beforeAll: getMetadataOrDefault(Ctor, BEFORE_ALL_HOOKS, []),
-      beforeEach: getMetadataOrDefault(Ctor, BEFORE_EACH_HOOKS, []),
-      afterAll: getMetadataOrDefault(Ctor, AFTER_ALL_HOOKS, []),
-      afterEach: getMetadataOrDefault(Ctor, AFTER_EACH_HOOKS, []),
+      beforeAll: getMetadataOrDefault(BEFORE_ALL_HOOKS, Ctor, []),
+      beforeEach: getMetadataOrDefault(BEFORE_EACH_HOOKS, Ctor, []),
+      afterAll: getMetadataOrDefault(AFTER_ALL_HOOKS, Ctor, []),
+      afterEach: getMetadataOrDefault(AFTER_EACH_HOOKS, Ctor, []),
     },
   };
 }
@@ -45,8 +45,8 @@ export function tryProcessMetadata(
 function tryProcessTestSuite(fun: () => void): TestSuite {
   validateIsTestSuiteFn(fun);
   return {
-    desc: getMetadata(fun, TEST_SUITE_DESCRIPTION),
-    skip: getMetadata(fun, TEST_SUITE_SKIP),
+    desc: getMetadata(TEST_SUITE_DESCRIPTION, fun),
+    skip: getMetadata(TEST_SUITE_SKIP, fun),
     run: fun,
   };
 }

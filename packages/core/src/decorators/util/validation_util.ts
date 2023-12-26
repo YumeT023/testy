@@ -12,7 +12,7 @@ export function validateIsTestClass(Ctor: Ctor<any>) {
     throw new TypeError(INVALID_TEST_CLASS(Ctor) + "@TestClass\nclass Foo {}");
   }
 
-  if (!findMetadata(Ctor, TEST_CLASS_WATERMARK)) {
+  if (!findMetadata(TEST_CLASS_WATERMARK, Ctor)) {
     throw new TypeError(
       INVALID_TEST_CLASS(Ctor) + "Use the @TestClass decorator to mark it as test class."
     );
@@ -26,7 +26,7 @@ export function validateIsTestSuiteFn(fun: Function) {
     throw new TypeError("test suite should be a method");
   }
 
-  if (!findMetadata(fun, TEST_SUITE_WATERMARK)) {
+  if (!findMetadata(TEST_SUITE_WATERMARK, fun)) {
     throw new TypeError(INVALID_TEST_SUITE + "@Test()\ntest_suite_example() {}");
   }
 }

@@ -1,8 +1,7 @@
 import {Test, TestClass} from "@testy/core";
-// These are internal so won't be exposed in the published pkg
-import {TEST_CLASS_DESC} from "../packages/core/dist/decorator/constants";
-import {getMetadata} from "../packages/core/dist/decorator/util/metadata_util";
-import {validateIsTestClass} from "../packages/core/dist/decorator/util/validation_util";
+import {TEST_CLASS_DESC} from "@testy/core/dist/decorators/constants";
+import {getMetadata} from "@testy/core/dist/decorators/util/metadata_util";
+import {validateIsTestClass} from "@testy/core/dist/decorators/util/validation_util";
 import {ClassFixture} from "./utils/class_fixture";
 
 @TestClass()
@@ -24,10 +23,10 @@ export class DecoratorSpec {
 
     const testClass = ClassFixture.TEST_CLASS();
     expect(() => validateIsTestClass(testClass)).not.toThrow();
-    expect(getMetadata(testClass, TEST_CLASS_DESC)).toEqual(testClass.name);
+    expect(getMetadata(TEST_CLASS_DESC, testClass)).toEqual(testClass.name);
 
     const withCustomDesc = ClassFixture.TEST_CLASS_WITH_CUSTOM_DESC(DecoratorSpec.CUSTOM_CLS_DESC);
-    expect(getMetadata(withCustomDesc, TEST_CLASS_DESC)).toEqual(DecoratorSpec.CUSTOM_CLS_DESC);
+    expect(getMetadata(TEST_CLASS_DESC, withCustomDesc)).toEqual(DecoratorSpec.CUSTOM_CLS_DESC);
   }
 
   @Test()

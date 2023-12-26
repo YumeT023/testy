@@ -13,6 +13,7 @@
     "skipLibCheck": true,
     // by default, typescript redefine the utilities like 'extendStatic', '_decorate'
     // use this option with 'tslib' to significantly optimize build output
-    "importHelpers": true
+    "importHelpers": true,
+    "experimentalDecorators": true
   }
 }

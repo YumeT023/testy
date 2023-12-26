@@ -13,14 +13,14 @@ export class ClassFixture {
   }
 
   static TEST_CLASS() {
-    return @TestClass()
-    class TestCls {};
+    @TestClass()
+    class TestCls {}
+    return TestCls;
   }
 
   static TEST_CLASS_WITH_CUSTOM_DESC(desc: string) {
-    return @TestClass({
-      desc,
-    })
-    class TestClsWithDesc {};
+    @TestClass({desc})
+    class TestClsWithDesc {}
+    return TestClsWithDesc;
   }
 }
