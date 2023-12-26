@@ -6,8 +6,6 @@
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "declaration": true,
@@ -15,6 +13,7 @@
     "skipLibCheck": true,
     // by default, typescript redefine the utilities like 'extendStatic', '_decorate'
     // use this option with 'tslib' to significantly optimize build output
-    "importHelpers": true
+    "importHelpers": true,
+    "experimentalDecorators": true
   }
 }
